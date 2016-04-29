@@ -1,19 +1,18 @@
 <ng-map style="height:calc(100% - 64px);width:100%" center="[{{lat}}, {{lng}}]" styles="{{ styles }}">
-
 	<custom-marker ng-if="showItems" ng-repeat="event in events track by $index"
 			on-click="editEvent({{event}})"
 			position="{{event.lat}}, {{event.lng}}"
 			class="marker-event">
-		<div id="custom-marker-{{$index}}">
+		<div id="custom-marker-{{$index}}" class="custom-marker">
 			<img src="assets/img/pin_event.png">
 		</div>
 	</custom-marker>
 
 	<custom-marker ng-if="showZapSpot" 	ng-repeat="zap in zaps"	position="{{zap.pos}}" class="marker-zap">
-		<div>
+		<div class="custom-marker">
 			<img src="assets/img/pin_zap.png">
 		</div>
-	</custom-marker >
+	</custom-marker>
 
 	<custom-marker position="{{lat}}, {{lng}}" class="marker-me">
 		<div id="me">

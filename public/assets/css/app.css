@@ -87,3 +87,7 @@ body, html {
 .fullHeight {
 	height: 100%;
 }
+
+.custom-marker {
+    margin-bottom: -16px;
+}
